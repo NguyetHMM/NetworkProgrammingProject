@@ -33,8 +33,8 @@ void showgroups(long lent, char *text)
 	int length1=atoi(length);
 	tptr = text;
 	a1=text+strlen(text)+1;
-	printf("%d",lent);
-	printf("%s\n",a1);
+	// printf("%d",lent);
+	// printf("%s\n",a1);
 	printf("%18s %19s %19s\n", "Room's name", "Capacity", "Online");
 	for (int i=0;i<length1;i++)
 	{
@@ -185,7 +185,7 @@ int sendListOn(int sock)
 
 	/* Nhận phản hồi từ phòng chat */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -210,7 +210,7 @@ int kickuser(int sock){
 
 	/* Nhận phản hồi từ phòng chat */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -230,7 +230,7 @@ int kickuser(int sock){
 	bufr[strlen(bufr) - 1] = '\0';
 	sendpkt(sock, KICK, strlen(bufr)+1, bufr);
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	printf("%s\n",pkt->text);
 }
 int sendListUserGr(int sock)
@@ -241,7 +241,7 @@ int sendListUserGr(int sock)
 
 	/* Nhận phản hồi từ phòng chat */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -267,7 +267,7 @@ int sendListGr(int sock)
 
 	/* Nhận phản hồi từ phòng chat */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -338,7 +338,7 @@ int joinagroup(int sock)
 	
 	/* Nhận phản hồi từ server */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -420,7 +420,7 @@ int join11(int sock)
 
 	/* Nhận phản hồi từ server */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -505,7 +505,7 @@ int login(int sock, int *check)
 
 	/* Nhận phản hồi từ server */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -583,7 +583,7 @@ int sendRegister(int sock)
 		fprintf(stderr, "error: server died\n");
 		exit(1);
 	}
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	/*Error */
 	if (pkt->type == JOIN_REJECTED)
 	{
@@ -661,7 +661,7 @@ int sendCreatRoom(int sock)
 
 	/* Nhận phản hồi từ server */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		fprintf(stderr, "error: server died\n");
@@ -751,7 +751,7 @@ int logout(int sock, int *check)
 
 	/* Nhận phản hồi từ server */
 	pkt = recvpkt(sock);
-	printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+	
 	if (!pkt)
 	{
 		printf("error: server died\n");
@@ -859,7 +859,7 @@ int main(int argc, char *argv[])
 					Packet *pkt1;
 					char *tm;
 					pkt1 = recvpkt(sock);
-					printf("bang tin,type :%d , text:%s\n", pkt1->type,pkt1->text);
+					// printf("bang tin,type :%d , text:%s\n", pkt1->type,pkt1->text);
 					if (!pkt1)
 					{
 						/* Máy chủ ngừng hoạt động */
@@ -987,7 +987,7 @@ int main(int argc, char *argv[])
 
 										Packet *pkt;
 										pkt = recvpkt(sock);
-										printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+										
 										if (!pkt)
 										{
 											/* Máy chủ ngừng hoạt động */
@@ -1189,7 +1189,7 @@ int main(int argc, char *argv[])
 
 										Packet *pkt;
 										pkt = recvpkt(sock);
-										printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+										
 										if (!pkt)
 										{
 											/* Máy chủ ngừng hoạt động */

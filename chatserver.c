@@ -1071,13 +1071,13 @@ int main(int argc, char *argv[])
 					{
 						
 					case REGISTER:
-					printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+					
 						username = strtok(pkt->text, "/");
 						pass = strtok(NULL,"/");
 						processRegister(sock, username, pass);
 						break;
 					case CREAT_ROOM:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						name=strtok(pkt->text, "/");
 						cap= strtok(NULL,"/");
 						// name = pkt->text;
@@ -1090,7 +1090,7 @@ int main(int argc, char *argv[])
 						Update(sock, name, current[sock]->username);
 						break;
 					case LOG_IN:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						
 						username = strtok(pkt->text, "/");
 						pass = strtok(NULL,"/");
@@ -1100,60 +1100,60 @@ int main(int argc, char *argv[])
 						processLogIn(sock, username, pass);
 						break;
 					case LOG_OUT:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						username = pkt->text;
 						processLogout(sock, username);
 						break;
 					case JOIN_2:
 						username = pkt->text;
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						join11(sock,username, current[sock]->username);
 						// freepkt(pkt);
 						break;
 					case LIST_GROUPS:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						listgroups(sock);
 						break;
 					case JOIN_GROUP:
-					printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+					
 						gname = pkt->text;
 						joingroup(sock, gname, current[sock]->username);
 						break;
 					case LISTUSERON:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						listOnline(sock);
 						break;
 					case LIST_USERGR:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						listUserGr(sock);
 						break;
 					case LEAVE_GROUP:
 						leavegroup(sock);
 						break;
 					case TO:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						toUser(sock, pkt->text);
 						break;
 					case USER_TEXT:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						relaymsg(sock, pkt->text);
 						break;
 					case MENU:
 						repmenu(sock,pkt->text);
 						break;
 					case USER_TEXT1:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						givemsg(sock,pkt->text);
 						break;
 					case QUIT:
 						leave11(sock);
 						break;
 					case REQUEST1:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						sendApcept(sock,pkt->text);
 						break;
 					case KICK:
-						printf("bang tin,type :%d , text:%s\n", pkt->type,pkt->text);
+						
 						kickuser(sock,pkt->text);
 						break;
 					}

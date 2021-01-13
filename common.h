@@ -35,6 +35,7 @@
 #define KICK           25
 #define KICKU          26
 /* Cấu truct _packet */
+
 typedef struct _packet {
 
   /* Loại gói */

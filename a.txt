@@ -1,16 +1,18 @@
-hmn 123  1
-hthq hthq 1 32765
-hoquynh hoquynh 1 32667
-d d 1 32667
-abcac asbca 1 32765
-ha ha 1 32764
-phuonganh 123 1 32765
-c c 1 32767
-b b 1 32767
-a a 3 32767
-popo 123 1 32767
-cas v 1 32767
-hoanganh hoanganh23 1 32766
-hq hq 1 32765
-quynh quynh 1 32765
+HMN 123  1
+NKT 123  1
 hthq1 hthq1 3 1
+quynh quynh 1 32765
+hq hq 1 32765
+hoanganh hoanganh23 1 32766
+cas v 1 32767
+popo 123 1 32767
+a a 3 32767
+b b 1 32767
+c c 1 32767
+phuonganh 123 1 32765
+ha ha 1 32764
+abcac asbca 1 32765
+d d 1 32667
+hoquynh hoquynh 1 32667
+hthq hthq 1 32765
+hmn 123 1 32766
